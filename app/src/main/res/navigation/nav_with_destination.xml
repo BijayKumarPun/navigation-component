@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_with_destination"
+    app:startDestination="@id/placeholder">
+
+    <fragment android:id="@+id/placeholder" />
+    <fragment android:id="@+id/placeholder2" />
+    <fragment android:id="@+id/placeholder3" />
+    <fragment android:id="@+id/placeholder4" />
+    <fragment
+        android:id="@+id/clubBar"
+        android:name="test.navigation.sub.ClubBar"
+        android:label="ClubBar" />
+    <fragment android:id="@+id/placeholder5"/>
+    <fragment android:id="@+id/placeholder6"
+        android:name="test.navigation.sub.ClubRestroom"/>
+
+</navigation>
