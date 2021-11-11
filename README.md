@@ -140,7 +140,9 @@ To add an action simply use the Graph Editor and connect two destinations. Doing
 Here, the `placeholder` destination has an `action` with `id` `action_placeholder1_to_placeholder2` that leads to destination `placeholder2`, - which is simply the `id` of the destination class.
 So in a nutshell, this can be read as `this start destination with this destination id to that end destination with that destination id via this action with this action id`.
 At minimun, an action has the `id` of itself, and the `destination id` that it leads to.
+
 ---
+
 > Navigate to a destination
 
 Navigation to the destination is done via code using `NavController`, an object that manages app navigation within a `NavHost`. This also means, if there are multiple navigation hosts, then there will also be multiple NavController. For every Navigation Host, there is an exact one `NavController` object.
@@ -160,4 +162,30 @@ val navHostFragment =
         supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 val navController = navHostFragment.navController
 ```
+---
+
+> Ensuring type-safety with safe args
+
+It's recommended to use the Safe Args gradle plugin to navigate between destinations. This plugin ensures type safety by generating simple objects and builder classes.
+
+To include `safe args` gradle plugin, simply add the following dependency
+```
+  classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+```
+Also, to generate the code, one of the following plugins must be used as well:
+For both Java and Kotlin:
+```
+plugins {
+    id("androidx.navigation.safeargs")
+}
+```
+For Kotlin only
+```
+plugins {
+    id("androidx.navigation.safeargs.kotlin")
+}
+```
+
+After the plugin is enabled, it generates `classes` and `methods` for each action we've defined. 
+
 
