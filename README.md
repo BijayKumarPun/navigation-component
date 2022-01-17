@@ -1,5 +1,5 @@
 # navigation
-Testing Android Navigation Componenet
+This project was made to learn Android Navigation Component 
 
 Dependencies
 ```
