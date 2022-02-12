@@ -1,5 +1,5 @@
-# navigation
-This project was made to learn Android Navigation Component 
+# Android Navigation Component
+Getting started with Android Navigation Component
 
 Dependencies
 ```
